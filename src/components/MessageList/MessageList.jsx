@@ -20,7 +20,9 @@ export const MessageList = () => {
     <div className="chat-messages">
       {!!selectedChat.messages.length ? (
         groupMessages(selectedChat.messages).map((m, index) => (
-          <div key={index} className="chat-message">
+          <div key={index} className={`chat-message ${
+            m[0].sender.username === chatConfig.userName ? 'me' : 'her'
+          }`}>
             <div className="chat-message-header">
               <ChatAvatar
                 className="message-avatar"
@@ -33,7 +35,17 @@ export const MessageList = () => {
             <div className="message-content">
               {m.map((individualMessage, index) => (
                 <div key={index}>
-                  <div className="message-text">{individualMessage.text}</div>
+                  {m[0].sender.username === chatConfig.userName ? (
+                      <div className="mymessagetext">
+                      {individualMessage.text}
+                    </div>
+                  ): (
+                    <div className="hermessagetext">
+                    {individualMessage.text}
+                  </div>
+
+                  )}
+                  
                   { m[0].sender.username == chatConfig.userName ? (
                       <div onClick={() => deleteMymessage(individualMessage)} className="send-message-icon">
                         <Icon name="trash alternate" color="grey" />

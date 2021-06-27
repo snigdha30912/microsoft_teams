@@ -3,6 +3,7 @@ import { useResolved } from 'hooks';
 import { ChatList } from 'components';
 import { RailHeader } from 'components';
 import { Loader } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
 
 export const LeftRail = () => {
   const { myChats, createChatClick } = useChat();
@@ -23,7 +24,11 @@ export const LeftRail = () => {
             </div>
           )}
           <button className="create-chat-button" onClick={createChatClick}>
-            Create Chat
+          <Icon
+            color="white"
+            name="plus"
+            size = "large"
+          />
           </button>
         </>
       ) : (

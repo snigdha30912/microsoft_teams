@@ -33,7 +33,7 @@ export const ChatList = () => {
               <>
                 <Icon circular inverted color="violet" name="user cancel" />
                 <div className="chat-list-preview">
-                  <div className="preview-username">No One Added Yet</div>
+                  <div className="preview-username">No Users Added</div>
                 </div>
               </>
             ) : c.people.length === 2 ? (
@@ -45,7 +45,7 @@ export const ChatList = () => {
                   <div className="preview-message">
                     {c.last_message.attachments.length
                       ? `${c.last_message.sender.username} sent an attachment`
-                      : c.last_message.text.slice(0, 50) + '...'}
+                      : c.last_message.text.slice(0, 15) + '...'}
                   </div>
                 </div>
               </>
