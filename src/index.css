@@ -19,14 +19,14 @@ code {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-color: #121212;
+  background-color : #ffe2e6;
 }
 .auth-form {
   width: 500px;
   padding: 25px;
   max-width: 100%;
   border-radius: 10px;
-  background-color: #15202b;
+  background-color: #aec6cf;
   box-shadow: 0px 0px 10px black;
 }
 .auth-form label {
@@ -38,7 +38,7 @@ code {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid black;
-  background-color: #d2d2d2;
+  background-color: #ffffff;
 }
 .auth-form button {
   padding: 10px;
@@ -62,7 +62,7 @@ code {
   margin-bottom: 25px;
 }
 .auth-link {
-  color: gray;
+  color: rgb(204, 29, 67);
   cursor: pointer;
   font-weight: bold;
 }
@@ -82,12 +82,19 @@ code {
 .left-rail {
   height: 100%;
   width: 300px;
-  background-color: #0B1320;
+  background-color: #aec6cf;
 }
+
+.switch-rail {
+  height: 100%;
+  width: 70px;
+  background-color: #ffc5cd;
+}
+
 .chat-list-container {
   overflow-y: auto;
   height: calc(100% - 150px);
-  background-color: #0B1320;
+  background-color: #aec6cf;
 }
 .no-chats-yet {
   padding: 15px;
@@ -105,7 +112,7 @@ code {
   background-color: #ffffff;
 
   align-items: center;
-  box-shadow: 0px 0px 2px #CB7666;
+  box-shadow: 0px 0px 2px #ffffff;
   justify-content: space-between;
 }
 .chat-list-item-content {
@@ -118,7 +125,7 @@ code {
 }
 .chat-list-item .selected,
 .chat-list-item:hover {
-  background-color: #7954A1;
+  background-color: #ffffff;
 }
 .chat-list-avatar {
   width: 28px;
@@ -126,8 +133,21 @@ code {
   border-radius: 100%;
 }
 .selected-chat-item {
-  background-color: #C55FFC;
+  background-color: #aec6cf;
 }
+.chat-screen-show {
+  display : flex;
+  align-items: center;;
+  justify-content:center;
+  width: 70px;
+  height: 200px;
+  cursor: pointer;
+  text-align: right;
+  
+}
+
+
+
 .chat-item-delete {
   width: 35px;
   cursor: pointer;
@@ -140,19 +160,20 @@ code {
 .chat-item-delete:hover {
   color: #cd0000;
 }
+
 .chat-list-preview {
   margin-left: 10px;
 }
 .create-chat-button {
   width: 50px;
   height: 50px;
-  
+  margin-left: 250px;
   border: none;
   outline: none;
   color: white;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #C55FFC;
+  background-color: #ffc5cd;
 }
 .preview-message {
   font-size: 12px;
@@ -184,7 +205,7 @@ code {
 .chats-loading {
   height: 100%;
   position: relative;
-  background-color: #E0EEEE;
+  background-color: #aec6cf;
 }
 .left-rail-header {
   height: 100px;
@@ -192,7 +213,7 @@ code {
   padding: 10px;
   position: relative;
   align-items: center;
-  background-color: #0B1320;
+  background-color: #aec6cf;
   
   
 
@@ -205,6 +226,7 @@ code {
 .current-username {
   margin-left: 15px;
   font-size: 28px;
+  color: #000000;
 }
 .user-avatar {
   cursor: pointer;
@@ -224,16 +246,19 @@ code {
   background-color: #ffffff;
 }
 .no-chat-selected {
+  height: 100%;
+  width: 100%;
   display: flex;
   font-size: 50px;
-  padding: 25px;
+  
   color: #000000;
   align-self: center;
   align-items: center;
-  border-radius: 10px;
   justify-content: center;
-  background-color: #E0EEEE;
-  box-shadow: 0px 0px 3px #008080;
+  background-color: #ffffff;
+  border-color: #B6E2D3;
+  border-left: 5px;
+  
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -243,27 +268,30 @@ code {
   user-select: none;
 }
 .point-left {
-  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: auto;
-  margin-right: 25px;
 }
 .chat {
   width: 100%;
   display: flex;
   flex-direction: column;
+  font-family:  "Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .chat-toolbar {
   display: flex;
   min-height: 50px;
-  color: #f2f2f2;
+  color: #000000;
   padding-left: 25px;
   padding-right: 25px;
   align-items: center;
-  background-color: #C55FFC;
+  background-color: #aec6cf;
   justify-content: space-between;
 }
 .chat-header-text {
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: bold;
 }
@@ -339,7 +367,7 @@ code {
   font-size: 16px;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #C55FFC;
+  background-color: #aec6cf;
   border-radius: 10px;
   color: #000000;
 }
@@ -378,7 +406,7 @@ code {
   background-color: #ffffff;
 }
 .attachment-icon:hover {
-  background-color: #C55FFC;
+  background-color: #aec6cf;
 }
 .chat-input {
   flex: 1;
@@ -399,7 +427,7 @@ code {
   justify-content: center;
 }
 .send-message-icon:hover {
-  background-color: #C55FFC;
+  background-color: #aec6cf;
 }
 .user-search .input {
   width: 100%;
@@ -558,3 +586,24 @@ code {
   color:grey;
   font-size:10px;
 }
+
+.login-site {
+  height: 100%;
+}
+.login-page {
+
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.picture-right {
+  float: right;
+  width: 100%;
+  height: auto;
+}
+
+

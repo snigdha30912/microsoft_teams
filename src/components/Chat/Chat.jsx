@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useChat } from 'context';
 import { getChats, ChatEngine } from 'react-chat-engine';
-import { LeftRail, ChatToolbar, ChatInput, MessageList } from 'components';
+import { LeftRail, ChatToolbar, ChatInput, MessageList, SwitchingRail } from 'components';
 import FileUpload from 'components/FileUpload/FileUpload';
 
 export const Chat = () => {
@@ -99,6 +99,7 @@ export const Chat = () => {
       )}
 
       <div className="chat-container">
+        <SwitchingRail/>
         <LeftRail />
         <div className="current-chat">
           {selectedChat ? (
@@ -125,11 +126,10 @@ export const Chat = () => {
           ) : (
             <div className="no-chat-selected">
               <img
-                src="/img/startconversation.jpg"
+                src="/img/chat3.webp"
                 className="point-left"
                 alt="point-left"
               />
-              Select A Chat
             </div>
           )}
         </div>

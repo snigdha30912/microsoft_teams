@@ -4,7 +4,7 @@ import { Icon } from 'semantic-ui-react';
 import { ImageUpload } from 'components';
 import { sendMessage } from 'react-chat-engine';
 import { useHistory } from 'react-router-dom';
-import shortid from 'shortid';
+
 
 export const ChatInput = () => {
   const { chatConfig, selectedChat } = useChat();
@@ -30,14 +30,7 @@ export const ChatInput = () => {
     }
   };
 
-  const startCall = () => {
-    // generate unique id
-    const uid = shortid.generate();
-    // redirect to the call page.
-    // history.push(`/${uid}`);
-    const win = window.open(`/${uid}`, "_blank");
-    win.focus();
-  }
+  
 
   const handleChange = (e) => {
     setChatInputText(e.target.value);
@@ -78,9 +71,6 @@ export const ChatInput = () => {
         />
         <div onClick={sendChatMessage} className="send-message-icon">
           <Icon name="send" color="black" />
-        </div>
-        <div onClick={startCall} className="send-message-icon">
-          <Icon name="video" color="black" />
         </div>
       </div>
 

@@ -49,8 +49,10 @@ export const Signup = () => {
   };
 
   return (
+    <div className="login-site">
+      <div className="login-page">
     <div className="auth-form">
-      <h1>Signup</h1>
+      <h1 style={{'color' : 'rgb(204, 29, 67)'}}>Signup</h1>
       <Formik
         onSubmit={signup}
         validateOnMount={true}
@@ -75,7 +77,7 @@ export const Signup = () => {
               </span>
             </div>
 
-            <button disabled={isSubmitting || !isValid} type="submit">
+            <button disabled={isSubmitting || !isValid} type="submit" style={{'background-color':'#dea5a4', 'color' : 'rgb(204, 29, 67)'}}>
               Sign Up
             </button>
           </Form>
@@ -83,6 +85,16 @@ export const Signup = () => {
       </Formik>
 
       {!!serverError && <div className="error">{serverError}</div>}
+      </div>
+    </div>
+    <div className="login-page">
+    <img
+              src="/img/chat5.webp"
+              className="picture-right"
+              alt="point-left"
+            />
+            </div>
+  
     </div>
   );
 };

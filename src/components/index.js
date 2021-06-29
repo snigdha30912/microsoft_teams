@@ -14,3 +14,4 @@ export * from './MessageList';
 export * from './ImageUpload';
 export * from './VideoCallPage';
 export * from './FileUpload';
+export * from './SwitchingRail';

@@ -66,7 +66,7 @@ export const ChatList = () => {
               </>
             )}
           </div>
-          <div onClick={() => {
+          {/* <div onClick={() => {
             setIsChatScreen(true);
             setIsFileUpload(false);
           
@@ -80,7 +80,7 @@ export const ChatList = () => {
 
           }} className="chat-item-delete">
             <Icon name="folder open" color="black"/>
-          </div>
+          </div> */}
 
           <div onClick={() => deleteChatClick(c)} className="chat-item-delete">
             <Icon name="delete" />

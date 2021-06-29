@@ -25,9 +25,9 @@ export const LeftRail = () => {
           )}
           <button className="create-chat-button" onClick={createChatClick}>
           <Icon
-            color="white"
+            color="black"
             name="plus"
-            size = "large"
+            size = "big"
           />
           </button>
         </>
